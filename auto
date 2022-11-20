@@ -1,0 +1,42 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+
+
+local Window = Library.CreateLib("Anime Race Clicker by Nv", "DarkTheme")
+
+
+
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Main")
+
+Section:NewToggle("autoTap", "", function(state)
+_G.autoTap = state
+
+if state then
+task.spawn(function()
+         while _G.autoTap == true do
+             
+
+game:GetService("ReplicatedStorage").System.SystemClick.Click:FireServer()
+
+            wait()
+        end
+    end)
+end
+end)
+
+
+local Tab = Window:NewTab("Movement")
+local Section = Tab:NewSection("Movement")
+Section:NewToggle("walkSpeed", "", function(state)
+_G.walkSpeed = state
+if state then
+task.spawn(function()
+         while _G.walkSpeed == true do
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 750
+wait()
+   end
+    end)
+end
+end)
+
