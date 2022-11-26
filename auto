@@ -15,9 +15,7 @@ _G.autoTap = state
 if state then
 task.spawn(function()
          while _G.autoTap == true do
-             
-
-game:GetService("ReplicatedStorage").System.SystemClick.Click:FireServer()
+             game:GetService("ReplicatedStorage").System.SystemClick.Click:FireServer()
 
             wait()
         end
@@ -33,10 +31,193 @@ _G.walkSpeed = state
 if state then
 task.spawn(function()
          while _G.walkSpeed == true do
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 750
-wait()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 250
+		wait()
    end
-    end)
+end)
 end
 end)
+
+
+local Tab = Window:NewTab("AutoHatch")
+local Section = Tab:NewSection("Naruto")
+Section:NewToggle("Naruto1", "", function(state)
+_G.autoHatch = state
+if state then 
+task.spawn(function()
+		while _G.autoHatch == true do
+			local args = {
+   		 [1] = 1,
+   		 [2] = 3
+		}
+
+game:GetService("ReplicatedStorage").Tool.DrawUp.Msg.DrawHero:InvokeServer(unpack(args))
+	end
+end)
+end
+end)
+
+
+Section:NewToggle("Naruto2", "", function(state)
+_G.autoHatch = state
+if state then 
+task.spawn(function()
+		while _G.autoHatch == true do
+			local args = {
+   		 [1] = 2,
+   		 [2] = 3
+		}
+
+game:GetService("ReplicatedStorage").Tool.DrawUp.Msg.DrawHero:InvokeServer(unpack(args))
+end
+end)
+end
+end)
+
+
+local Section = Tab:NewSection("Demon Slayer")
+Section:NewToggle("Demon Slayer 1", "", function(state)
+_G.autoHatch = state
+if state then 
+task.spawn(function()
+		while _G.autoHatch == true do
+			local args = {
+   		 [1] = 3,
+   		 [2] = 3
+		}
+
+game:GetService("ReplicatedStorage").Tool.DrawUp.Msg.DrawHero:InvokeServer(unpack(args))
+end
+end)
+end
+end)
+
+
+
+Section:NewToggle("Demon Slayer 2", "", function(state)
+_G.autoHatch = state
+if state then 
+task.spawn(function()
+		while _G.autoHatch == true do
+			local args = {
+   		 [1] = 4,
+   		 [2] = 3
+		}
+
+game:GetService("ReplicatedStorage").Tool.DrawUp.Msg.DrawHero:InvokeServer(unpack(args))
+end
+end)
+end
+end)
+
+
+
+local Section = Tab:NewSection("One Piece")
+Section:NewToggle("One Piece 1", "", function(state)
+_G.autoHatch = state
+if state then 
+task.spawn(function()
+		while _G.autoHatch == true do
+			local args = {
+   		 [1] = 5,
+   		 [2] = 3
+		}
+
+game:GetService("ReplicatedStorage").Tool.DrawUp.Msg.DrawHero:InvokeServer(unpack(args))
+end
+end)
+end
+end)
+
+
+Section:NewToggle("One Piece 2", "", function(state)
+_G.autoHatch = state
+if state then 
+task.spawn(function()
+		while _G.autoHatch == true do
+			local args = {
+   		 [1] = 6,
+   		 [2] = 3
+		}
+
+game:GetService("ReplicatedStorage").Tool.DrawUp.Msg.DrawHero:InvokeServer(unpack(args))
+end
+end)
+end
+end)
+
+local Section = Tab:NewSection("DBZ")
+Section:NewToggle("DBZ 1", "", function(state)
+_G.autoHatch = state
+if state then 
+task.spawn(function()
+		while _G.autoHatch == true do
+			local args = {
+   		 [1] = 7,
+   		 [2] = 3
+		}
+
+game:GetService("ReplicatedStorage").Tool.DrawUp.Msg.DrawHero:InvokeServer(unpack(args))
+end
+end)
+end
+end)
+
+
+Section:NewToggle("DBZ 2", "", function(state)
+_G.autoHatch = state
+if state then 
+task.spawn(function()
+		while _G.autoHatch == true do
+			local args = {
+   		 [1] = 8,
+   		 [2] = 3
+		}
+
+game:GetService("ReplicatedStorage").Tool.DrawUp.Msg.DrawHero:InvokeServer(unpack(args))
+end
+end)
+end
+end)
+
+local Section = Tab:NewSection("AOT")
+Section:NewToggle("AOT 1", "", function(state)
+_G.autoHatch = state
+if state then 
+task.spawn(function()
+		while _G.autoHatch == true do
+			local args = {
+   		 [1] = 9,
+   		 [2] = 3
+		}
+
+game:GetService("ReplicatedStorage").Tool.DrawUp.Msg.DrawHero:InvokeServer(unpack(args))
+end
+end)
+end
+end)
+
+
+Section:NewToggle("AOT 2", "", function(state)
+_G.autoHatch = state
+if state then 
+task.spawn(function()
+		while _G.autoHatch == true do
+			local args = {
+   		 [1] = 10,
+   		 [2] = 3
+		}
+
+game:GetService("ReplicatedStorage").Tool.DrawUp.Msg.DrawHero:InvokeServer(unpack(args))
+end
+end)
+end
+end)
+
+
+
+
+
+
+
 
